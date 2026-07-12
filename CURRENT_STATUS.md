@@ -9,8 +9,8 @@ under `outputs/` record their own run dates and do not override this document.
 
 ```text
 Command: python -m pytest -q
-Result: 548 passed, 4 skipped, 72 subtests passed
-Duration: 8.82s
+Result: 550 passed, 4 skipped, 72 subtests passed
+Duration: 8.48s
 ```
 
 The four skipped tests are service-dependent lanes and are not successes.
@@ -49,14 +49,12 @@ The four skipped tests are service-dependent lanes and are not successes.
 
 ## Public Alpha Position
 
-The local release candidate is **v0.1.0-alpha: Experimental Open Core +
-Reference Pack + Reference Assurance Gateway**. A source ZIP, SHA-256, and
-clean-checkout verification have been produced locally. The remaining external
-publication action is creating the public GitHub repository named `LCE` under
-the selected account and uploading the candidate tag and artifacts. Independent
-evaluation remains required before any comparative-uplift claim, not before
-this bounded alpha scope. The source-available license and Organization
-approval boundary are documented in `LICENSE` and
+The published alpha line is **v0.1.0-alpha.1: Experimental Open Core +
+Reference Pack + Reference Assurance Gateway**. It adds a verified GitHub and
+release-wheel `pip` path to the original alpha without changing the bounded
+claim. Independent evaluation remains required before any comparative-uplift
+claim, not before this bounded alpha scope. The source-available license and
+Organization approval boundary are documented in `LICENSE` and
 `ORGANIZATIONAL_USE.md`. See [RELEASE_READINESS.md](RELEASE_READINESS.md).
 
 ## Source of Truth Rules

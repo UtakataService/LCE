@@ -5,6 +5,7 @@
 | Path | Reason |
 |---|---|
 | `lce_validation/` | LCE implementation, data contracts, fixtures, and schemas. |
+| `PIP_INSTALL.md` | pip installation contract and command surface. |
 | `tests/` | Regression and public-contract verification. |
 | `examples/` | Dependency-free Open Core and assurance demonstrations. |
 | `profiles/gemma4_e4b_reference_profile_v1.json` | Versioned data-only local Ollama reference profile. |

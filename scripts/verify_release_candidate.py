@@ -9,11 +9,14 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {
     "LICENSE",
     "RELEASE_NOTES_v0.1.0-alpha.md",
+    "RELEASE_NOTES_v0.1.0-alpha.1.md",
+    "PIP_INSTALL.md",
     "GEMMA4_E4B_REFERENCE.md",
     "EVALUATION_HOLDOUT_PLAN.md",
     "profiles/gemma4_e4b_reference_profile_v1.json",
     "examples/gemma4_e4b_reference_demo.py",
     "scripts/build_release_archive.py",
+    "lce_validation/__main__.py",
 }
 CONTACT = "https://utakataservice.com/contact/contact.php"
 

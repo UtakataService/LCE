@@ -18,13 +18,11 @@ service, a general safety product, or a third-party plugin platform.
 | Evaluation integrity | Fixed evidence clearly labeled; an independent holdout plan published | Plan GO; first evaluator-held corpus and comparison run remain pending. |
 | Community health | Contribution, security, support, conduct, issue/PR templates present | GO; contact form is published for security and Organization-use requests. |
 | License | Bundled license and matching package metadata | GO for source-available release; Organization contact route is published. |
-| Release artifact | Tagged source archive, checksum, release notes, and known-limit list | GO locally: ZIP, SHA-256, release notes, and clean-checkout evidence are prepared. GitHub publication remains pending repository owner/remote setup. |
+| Release artifact | Tagged source archive, checksum, release notes, and known-limit list | `v0.1.0-alpha` is published. The current `v0.1.0-alpha.1` packaging follow-up adds a wheel and pip verification. |
 
 ## Release Blockers
 
-1. Create the public GitHub repository `LCE`, push the staged candidate, tag
-   `v0.1.0-alpha`, and upload the generated ZIP and SHA-256 file.
-2. Run the independent holdout through an evaluator-held corpus before claiming
+1. Run the independent holdout through an evaluator-held corpus before claiming
    any comparative uplift.
 
 The current integrity evidence is in

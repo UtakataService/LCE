@@ -23,7 +23,7 @@ def iter_release_files(root: Path) -> list[Path]:
     return sorted(files, key=lambda item: item.relative_to(root).as_posix())
 
 
-def build_archive(output: Path, root_name: str = "LCE-0.1.0-alpha") -> list[str]:
+def build_archive(output: Path, root_name: str) -> list[str]:
     output.parent.mkdir(parents=True, exist_ok=True)
     names: list[str] = []
     with ZipFile(output, "w", compression=ZIP_DEFLATED, compresslevel=9) as archive:
@@ -40,8 +40,9 @@ def build_archive(output: Path, root_name: str = "LCE-0.1.0-alpha") -> list[str]
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", default="dist/LCE-0.1.0-alpha.zip")
+    parser.add_argument("--root-name", default="LCE-0.1.0-alpha")
     args = parser.parse_args()
-    names = build_archive(Path(args.out))
+    names = build_archive(Path(args.out), args.root_name)
     print(f"RELEASE_ARCHIVE_BUILT files={len(names)} path={args.out}")
     return 0
 

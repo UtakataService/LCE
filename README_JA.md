@@ -63,6 +63,17 @@ Gemmaの会話品質や事実性を保証するものではありません。
 同じ候補を比較する版管理済み参照デモは
 [Gemma 4 E4B参照統合](GEMMA4_E4B_REFERENCE.md) を参照してください。
 
+## pipでの導入
+
+PyPI公開前のalpha版は、GitHubから直接導入できます。
+
+```powershell
+python -m pip install "lce-open-core @ git+https://github.com/UtakataService/LCE.git@v0.1.0-alpha.1"
+```
+
+`lce`、`lce-api`、`python -m lce_validation` が利用可能になります。詳細は
+[PIP_INSTALL.md](PIP_INSTALL.md) を参照してください。
+
 ## 最初の公開範囲
 
 最初の公開候補は **v0.1.0-alpha: Experimental Open Core + Reference Pack +

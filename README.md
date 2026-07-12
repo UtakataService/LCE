@@ -43,6 +43,18 @@ py -3.11 examples\reference_assurance_gateway.py
 The examples use no model, network, or mutable persistence. See
 [QUICKSTART.md](QUICKSTART.md) for expected output and verification.
 
+## Install with pip
+
+Install the alpha directly from GitHub:
+
+```powershell
+python -m pip install "lce-open-core @ git+https://github.com/UtakataService/LCE.git@v0.1.0-alpha.1"
+```
+
+This provides `lce`, `lce-api`, and `python -m lce_validation`. The package is
+not yet published to PyPI. See [PIP_INSTALL.md](PIP_INSTALL.md) for the release
+wheel path and the command boundary.
+
 ## Integrate Through the API
 
 Start the local API, send an LLM or program candidate to a gate, and use the
@@ -85,10 +97,11 @@ an OSI-approved open-source license. See [LICENSE](LICENSE),
 - [Documentation index](DOCUMENTATION_INDEX.md)
 - [Architecture and boundaries](OVERVIEW.md)
 - [Open Core SDK](OPEN_CORE_SDK.md)
+- [pip installation](PIP_INSTALL.md)
 - [Evaluation policy](EVALUATION_POLICY.md)
 - [Independent holdout plan](EVALUATION_HOLDOUT_PLAN.md)
 - [Gemma 4 E4B reference integration](GEMMA4_E4B_REFERENCE.md)
-- [v0.1.0-alpha release notes](RELEASE_NOTES_v0.1.0-alpha.md)
+- [v0.1.0-alpha.1 release notes](RELEASE_NOTES_v0.1.0-alpha.1.md)
 - [Performance scope](PERFORMANCE.md)
 - [Pack trust boundary](PACK_TRUST.md)
 - [Contributing](CONTRIBUTING.md) and [security](SECURITY.md)

@@ -15,6 +15,7 @@
 |---|---|
 | [QUICKSTART.md](QUICKSTART.md) | Reproduce the two dependency-free reference paths. |
 | [OPEN_CORE_SDK.md](OPEN_CORE_SDK.md) | Public SDK surface and its limits. |
+| [PIP_INSTALL.md](PIP_INSTALL.md) | GitHub and release-wheel installation with the installed commands. |
 | [REFERENCE_APP.md](REFERENCE_APP.md) | Reference Assurance Gateway behavior. |
 | [API.md](API.md) | Local HTTP Control API for model/program integration. |
 | [GEMMA4_E4B_REFERENCE.md](GEMMA4_E4B_REFERENCE.md) | Versioned local Ollama reference integration and its boundary. |
@@ -38,8 +39,9 @@
 [ORGANIZATIONAL_USE.md](ORGANIZATIONAL_USE.md) define the source-available
 Individual/Organization use boundary.
 
-[RELEASE_NOTES_v0.1.0-alpha.md](RELEASE_NOTES_v0.1.0-alpha.md) lists the
-candidate release content and known limits.
+[RELEASE_NOTES_v0.1.0-alpha.1.md](RELEASE_NOTES_v0.1.0-alpha.1.md) lists the
+current packaging follow-up and command surface; the original alpha release
+notes remain in `RELEASE_NOTES_v0.1.0-alpha.md`.
 
 ## Historical Reports
 
