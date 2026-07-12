@@ -10,7 +10,7 @@ under `outputs/` record their own run dates and do not override this document.
 ```text
 Command: python -m pytest -q
 Result: 550 passed, 4 skipped, 72 subtests passed
-Duration: 8.72s
+Duration: 9.09s
 ```
 
 The four skipped tests are service-dependent lanes and are not successes.

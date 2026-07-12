@@ -1,105 +1,161 @@
 # LCE: Lightweight Cognitive Engine
 
-> Experimental Open Core for bounded judgement, verification, and control around language models and tools.
+> A CPU-first decision and assurance layer for LLMs, retrieval, APIs, and rule-based systems.
 
-[日本語](README_JA.md) | [Overview](OVERVIEW.md) | [Quickstart](QUICKSTART.md) | [Release readiness](RELEASE_READINESS.md) | [Current status](CURRENT_STATUS.md)
+[日本語](README_JA.md) | [Quickstart](QUICKSTART.md) | [Install with pip](PIP_INSTALL.md) | [API](API.md) | [Current status](CURRENT_STATUS.md)
 
-LCE is not a language model and does not replace a transformer. It is a small,
-inspectable control layer that can sit before and after an LLM, retrieval
-system, or tool adapter.
+![LCE decision core architecture](assets/lce-decision-core.png)
+
+## What LCE Is
+
+LCE is not a language model and does not try to replace a transformer. It is a
+small, inspectable control layer that evaluates a candidate produced by an LLM,
+search system, business API, sensor, or rule engine before the surrounding
+application decides what to do next.
+
+A fluent answer or syntactically valid JSON is not automatically authorized,
+grounded in declared evidence, compatible with a state transition, or safe to
+commit to an external system. LCE makes those checks explicit and returns a
+bounded decision.
 
 ```text
-request -> LCE policy / evidence / contract -> optional model or tool
-        -> LCE schema / authorization / state / trace gate -> result
+input
+  -> application selects a model, search, API, or rule producer
+  -> producer returns a candidate
+  -> LCE validates declared contracts, evidence, authorization, and state bounds
+  -> ACCEPT / RETURN_TO_MODEL / HOLD or a typed assurance decision
+  -> application owns retry, external execution, and state commit
 ```
 
-## What Is Available
+LCE never silently takes over model generation, tool execution, authorization,
+or database writes. Those actions remain caller-owned by design.
 
-- Data-only Pack and Profile loading with content-hash locking.
-- Deterministic trace/replay for bounded state transitions.
-- Structured-output parsing, schema validation, bounded repair, and declared
-  evidence/intent checks.
-- Candidate, grading, and accepted-result assurance gates.
-- A local HTTP Control API for placing LCE between your application and a
-  model, retrieval system, or program.
-- A small reference SDK and two dependency-free examples.
+## Why Put LCE Between a Model and an Action?
 
-## What Is Not Claimed
+Without a control layer, an application accumulates prompt-specific conditionals
+around each model call: choose a model, decide whether retrieval is needed,
+verify JSON, reject unsupported evidence, limit an action, and remember why a
+result was accepted. LCE centralizes the bounded parts of that path into
+versioned data contracts and traceable gates.
 
-- General chat quality, factual accuracy, or general reasoning parity with an LLM.
-- 20B-class standalone quality.
-- Third-party Pack distribution, arbitrary plugin execution, public service
-  operation, or Raspberry Pi production readiness.
+Use it when the important question is not only "can a model answer this?" but
+also:
 
-## Try It
+- Does the output satisfy the JSON contract expected by the next component?
+- Is a `known` claim backed by declared evidence references?
+- Is the candidate allowed to affect the requested action scope?
+- Does a required cross-check contradict a previously accepted result?
+- Can a reviewer replay why the application accepted, held, or returned it?
 
-Python 3.11+ is required. From the repository root:
+## What the Core Does
 
-```powershell
-py -3.11 examples\quickstart_open_core.py
-py -3.11 examples\reference_assurance_gateway.py
+| Surface | LCE responsibility | Boundary |
+|---|---|---|
+| Structured output | Parse JSON, validate an inspectable schema subset, apply safe defaults, and return repair instructions. | Valid JSON is not proof of truth or usefulness. |
+| Declared assurance | Check required values, terms, evidence references, certainty rules, and forbidden terms from policy. | No general intent or real-world truth inference. |
+| Candidate assurance | Check typed candidates against declared provenance, confidence, authorization, and action scope. | LCE does not execute the candidate. |
+| Acceptance challenge | Re-open an accepted result when required cross-checks or evidence signals fail. | It does not replace human review. |
+| State and trace | Bound state updates and produce deterministic trace/replay evidence. | It is not open-ended memory. |
+| Pack and profile loading | Load data-only language, policy, and model profiles with content-hash locking. | Packs cannot install executable bypass hooks. |
+
+## A Typical Integration
+
+The local HTTP Control API is intentionally small. Your application calls the
+producer, sends its raw candidate to LCE, and then acts only on the returned
+decision.
+
+```text
+application -> local LLM / RAG / business API -> LCE Control API -> application
 ```
 
-The examples use no model, network, or mutable persistence. See
-[QUICKSTART.md](QUICKSTART.md) for expected output and verification.
+For structured output, send `raw_output` and a contract to
+`POST /v1/gate/structured-output`.
 
-## Install with pip
+- **ACCEPT**: use `result.value` as the validated candidate.
+- **RETURN_TO_MODEL**: send LCE's bounded repair instruction back to the
+  producer, then submit the next candidate.
+- **HOLD**: do not act until the application obtains evidence or resolves the
+  declared policy condition.
 
-Install the alpha directly from GitHub:
+The API does not call an LLM, browse the web, execute a tool, or commit state.
+That separation lets LCE work with local models, frontier-model APIs,
+non-language services, and deterministic programs. See [API.md](API.md) for
+request formats and ownership details.
+
+## Install
+
+Python 3.11 or later is required. The package is not on PyPI yet; install the
+published alpha directly from GitHub:
 
 ```powershell
 python -m pip install "lce-open-core @ git+https://github.com/UtakataService/LCE.git@v0.1.0-alpha.1"
 ```
 
-This provides `lce`, `lce-api`, and `python -m lce_validation`. The package is
-not yet published to PyPI. See [PIP_INSTALL.md](PIP_INSTALL.md) for the release
-wheel path and the command boundary.
+This provides:
 
-## Integrate Through the API
+```powershell
+lce --help
+lce-api --host 127.0.0.1 --port 8789
+python -m lce_validation --help
+```
 
-Start the local API, send an LLM or program candidate to a gate, and use the
-returned decision before acting:
+Release-wheel and editable installation are documented in
+[PIP_INSTALL.md](PIP_INSTALL.md).
+
+## Try the Reference Paths
+
+The first two examples have no model or network dependency:
+
+```powershell
+python examples\quickstart_open_core.py
+python examples\reference_assurance_gateway.py
+```
+
+Start the local API and send a sample candidate:
 
 ```powershell
 python -m lce_validation.api_server --host 127.0.0.1 --port 8789
 python examples\api_client_demo.py --base-url http://127.0.0.1:8789
 ```
 
-The API returns `ACCEPT`, `RETURN_TO_MODEL`, or `HOLD`; it does not run the
-model or tool itself. See [API.md](API.md).
+An optional local Ollama reference uses `gemma4:e4b`. It generates one raw
+candidate per case, then evaluates that exact candidate in `lm_only` and
+`lm_with_lce` modes so a second generation cannot distort the comparison.
 
-## LLM Integration Evidence
+```powershell
+python examples\gemma4_e4b_reference_demo.py --out gemma4-e4b-reference.json
+```
 
-LCE can receive a local model candidate through an adapter and retain the final
-accept/reject decision. A live `gemma4:e4b` experiment used an 8.0B Q4_K_M
-local model and showed that LCE can block declared evidence-contract failures
-that are syntactically valid JSON. This is a narrow structured-output result,
-not a chat-quality or factuality comparison.
-
-See [the live ablation report](outputs/gemma4-e4b-lce-ablation-20260712/REPORT_JA.md).
-The versioned, same-candidate reference demo is documented in
+The recorded tag used an 8.0B Q4_K_M model. This is a structured-output
+integration probe, not a chat or factuality benchmark. See
 [GEMMA4_E4B_REFERENCE.md](GEMMA4_E4B_REFERENCE.md).
 
-## Public Alpha Scope
+## What LCE Does Not Claim
 
-The intended first public release is **v0.1.0-alpha: Experimental Open Core +
-Reference Pack + Reference Assurance Gateway**. It will be released only after
-the items in [RELEASE_READINESS.md](RELEASE_READINESS.md) are satisfied.
+LCE is intentionally narrow. It does **not** claim general dialogue quality,
+factual accuracy, 20B-class standalone ability, general safety moderation,
+autonomous tool use, public-network hosting, arbitrary plugin execution, or
+generalization from fixed regression fixtures.
 
-The repository uses a source-available license: Individual Users receive broad
-rights, while Organizational use requires prior written permission. It is not
-an OSI-approved open-source license. See [LICENSE](LICENSE),
-[ORGANIZATIONAL_USE.md](ORGANIZATIONAL_USE.md), and
-[LICENSE_POLICY.md](LICENSE_POLICY.md).
+Read [CURRENT_STATUS.md](CURRENT_STATUS.md) and
+[EVALUATION_POLICY.md](EVALUATION_POLICY.md) before interpreting a result.
 
-## Documentation
+## Documentation and License
 
-- [Documentation index](DOCUMENTATION_INDEX.md)
-- [Architecture and boundaries](OVERVIEW.md)
-- [Open Core SDK](OPEN_CORE_SDK.md)
-- [pip installation](PIP_INSTALL.md)
-- [Evaluation policy](EVALUATION_POLICY.md)
-- [Independent holdout plan](EVALUATION_HOLDOUT_PLAN.md)
-- [Gemma 4 E4B reference integration](GEMMA4_E4B_REFERENCE.md)
-- [Pack trust boundary](PACK_TRUST.md)
-- [Contributing](CONTRIBUTING.md) and [security](SECURITY.md)
+The public alpha is **Experimental Open Core + Reference Pack + Reference
+Assurance Gateway**. It includes a local API, reproducible reference paths, a
+versioned Gemma integration, a metadata-only independent-holdout plan, and
+public regression evidence. It remains experimental.
+
+- [Quickstart](QUICKSTART.md): examples and regression commands.
+- [Overview](OVERVIEW.md): architecture, ownership boundaries, and non-claims.
+- [Current status](CURRENT_STATUS.md): verified counts and remaining NO-GO areas.
+- [Evaluation policy](EVALUATION_POLICY.md) and [holdout plan](EVALUATION_HOLDOUT_PLAN.md): evidence boundaries and evaluator custody.
+- [Pack trust boundary](PACK_TRUST.md): why Packs are data rather than plugins.
+- [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and [Support](SUPPORT.md).
+
+LCE is source-available: individual users receive broad rights, while
+organizational use requires prior written permission. It is not an
+OSI-approved open-source license. See [LICENSE](LICENSE),
+[LICENSE_POLICY.md](LICENSE_POLICY.md), and
+[ORGANIZATIONAL_USE.md](ORGANIZATIONAL_USE.md).
