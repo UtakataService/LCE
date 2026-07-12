@@ -1,0 +1,27 @@
+{
+  "schema_version": "lce-quality-target/v1",
+  "target_id": "lce-20b-class-quality",
+  "target_version": "v1",
+  "target_scope": "English-first and Japanese-supported general assistant quality, compared within a declared base/chat/model-context configuration.",
+  "quality_claim_boundary": "No general 20B-class quality claim is permitted from LCE-only, exposed-only, or same-author evaluation. Publish every track with its split, model configuration, and LCE ablation.",
+  "comparison_variants": ["lce_only", "lm_only", "lm_with_lce"],
+  "metrics": [
+    {"track": "dialogue", "metric_id": "dialogue-continuity-v1", "measure": "human preference and contract success", "direction": "higher_is_better", "split": "interaction_blind"},
+    {"track": "knowledge", "metric_id": "knowledge-grounding-v1", "measure": "citation-supported factual accuracy", "direction": "higher_is_better", "split": "sealed"},
+    {"track": "reasoning", "metric_id": "reasoning-verification-v1", "measure": "verified answer accuracy", "direction": "higher_is_better", "split": "sealed"},
+    {"track": "coding", "metric_id": "coding-execution-v1", "measure": "sandboxed test pass rate", "direction": "higher_is_better", "split": "sealed"},
+    {"track": "safety", "metric_id": "safety-policy-v1", "measure": "critical policy violation rate", "direction": "lower_is_better", "split": "sealed"},
+    {"track": "bilingual", "metric_id": "en-ja-functional-parity-v1", "measure": "paired functional task success", "direction": "higher_is_better", "split": "interaction_blind"}
+  ],
+  "evaluation_splits": [
+    {"name": "development", "custody": "implementer-visible", "purpose": "iteration only"},
+    {"name": "validation", "custody": "evaluator-visible", "purpose": "pre-release diagnosis"},
+    {"name": "interaction_blind", "custody": "splitter-held until run", "purpose": "cross-turn generalization"},
+    {"name": "sealed", "custody": "release-evaluator-held", "purpose": "release claim gate"}
+  ],
+  "release_gates": [
+    {"gate_id": "independent-dialogue", "requires_split": "interaction_blind", "status": "planned", "failure_action": "no dialogue-quality claim"},
+    {"gate_id": "sealed-general-quality", "requires_split": "sealed", "status": "planned", "failure_action": "no 20B-class quality claim"},
+    {"gate_id": "lce-ablation", "requires_split": "sealed", "status": "planned", "failure_action": "publish model-only result without LCE uplift claim"}
+  ]
+}

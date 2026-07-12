@@ -1,0 +1,26 @@
+{"case_id":"W1-E-001","split":"exposed","family":"acknowledgement","language":"en","input":"yeah, that makes sense","expected_acts":["backchannel"]}
+{"case_id":"W1-E-002","split":"exposed","family":"acknowledgement","language":"en","input":"not really","expected_acts":["disconfirm"]}
+{"case_id":"W1-E-003","split":"exposed","family":"mood_event","language":"en","input":"I am stressed today","expected_acts":["share_difficulty"]}
+{"case_id":"W1-E-004","split":"exposed","family":"mood_event","language":"en","input":"I finally passed","expected_acts":["share_positive_event"]}
+{"case_id":"W1-E-005","split":"exposed","family":"advice_scope","language":"en","input":"Just listen for a moment, please","expected_acts":["listen_only"]}
+{"case_id":"W1-E-006","split":"exposed","family":"topic_operation","language":"en","input":"On another note, I have a question","expected_acts":["topic_shift"]}
+{"case_id":"W1-E-007","split":"exposed","family":"topic_operation","language":"en","input":"Back to that earlier topic","expected_acts":["topic_return"]}
+{"case_id":"W1-E-008","split":"exposed","family":"repair","language":"en","input":"Actually, I meant Friday","expected_acts":["self_correction"]}
+{"case_id":"W1-E-009","split":"exposed","family":"closing","language":"en","input":"Take care, talk later","expected_acts":["close","closing"]}
+{"case_id":"W1-E-010","split":"exposed","family":"foundation_handoff","language":"en","input":"What is a prime number?","expected_acts":["grounded_foundation_answer"]}
+{"case_id":"W1-J-001","split":"exposed","family":"acknowledgement","language":"ja","input":"たしかにそうだね","expected_acts":["backchannel"]}
+{"case_id":"W1-J-002","split":"exposed","family":"mood_event","language":"ja","input":"今日はしんどい","expected_acts":["share_difficulty"]}
+{"case_id":"W1-J-003","split":"exposed","family":"advice_scope","language":"ja","input":"今は解決策はいらない","expected_acts":["listen_only"]}
+{"case_id":"W1-J-004","split":"exposed","family":"topic_operation","language":"ja","input":"そういえば別の話だけど","expected_acts":["topic_shift"]}
+{"case_id":"W1-J-005","split":"exposed","family":"repair","language":"ja","input":"訂正: 来週のこと","expected_acts":["self_correction"]}
+{"case_id":"W1-J-006","split":"exposed","family":"closing","language":"ja","input":"また続き話そう","expected_acts":["close","closing"]}
+{"case_id":"W1-E-011","split":"blind","family":"acknowledgement","language":"en","input":"sure, I follow","expected_acts":["backchannel"]}
+{"case_id":"W1-E-012","split":"blind","family":"mood_event","language":"en","input":"Everything feels overwhelming today","expected_acts":["share_difficulty"]}
+{"case_id":"W1-E-013","split":"blind","family":"advice_scope","language":"en","input":"Can you hear me out without fixing it?","expected_acts":["listen_only"]}
+{"case_id":"W1-E-014","split":"blind","family":"topic_operation","language":"en","input":"Let us return to the earlier thing","expected_acts":["topic_return"]}
+{"case_id":"W1-J-007","split":"blind","family":"acknowledgement","language":"ja","input":"うん、分かった","expected_acts":["backchannel"]}
+{"case_id":"W1-J-008","split":"blind","family":"mood_event","language":"ja","input":"今日はなんだか疲弊した","expected_acts":["share_difficulty"]}
+{"case_id":"W1-E-015","split":"sealed","family":"repair","language":"en","input":"No, I was talking about Monday","expected_acts":["self_correction","disconfirm"]}
+{"case_id":"W1-E-016","split":"sealed","family":"closing","language":"en","input":"I will leave it there for today","expected_acts":["close","closing"]}
+{"case_id":"W1-J-009","split":"sealed","family":"topic_operation","language":"ja","input":"さっきの話に戻ると","expected_acts":["topic_return"]}
+{"case_id":"W1-J-010","split":"sealed","family":"foundation_handoff","language":"ja","input":"素数とは何？","expected_acts":["grounded_foundation_answer"]}

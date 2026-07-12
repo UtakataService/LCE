@@ -1,0 +1,35 @@
+{
+  "schema_version": "lce-pack/v1",
+  "pack_id": "org.lce.reference.semantic.dialogue",
+  "pack_version": "1.0.0",
+  "pack_type": "SemanticCube",
+  "engine_compatibility": "lce-core/v1",
+  "content_hash": "sha256:87504dab1cac252ac7e46fe5d585adb1fa9057c927c4124c6204cf8fe84e70f8",
+  "capabilities": ["semantic.cube.dialogue.v1"],
+  "payload": {
+    "axes": ["domain", "speech_act", "interaction", "epistemic", "affect", "reference"],
+    "units": [
+      {"semantic_id":"sem.discourse.repair","coordinates":{"domain":"dialogue","speech_act":"repair","interaction":"cooperative","epistemic":"revision","affect":"neutral","reference":"prior_turn"},"labels":["repair"]},
+      {"semantic_id":"sem.epistemic.negation","coordinates":{"domain":"dialogue","speech_act":"assertion","interaction":"cooperative","epistemic":"negation","affect":"neutral","reference":"none"},"labels":["negate"]},
+      {"semantic_id":"sem.discourse.close","coordinates":{"domain":"dialogue","speech_act":"close","interaction":"cooperative","epistemic":"none","affect":"neutral","reference":"conversation"},"labels":["close"]},
+      {"semantic_id":"sem.discourse.return","coordinates":{"domain":"dialogue","speech_act":"return","interaction":"cooperative","epistemic":"none","affect":"neutral","reference":"prior_turn"},"labels":["return"]},
+      {"semantic_id":"sem.discourse.shift","coordinates":{"domain":"dialogue","speech_act":"shift","interaction":"cooperative","epistemic":"none","affect":"neutral","reference":"new_topic"},"labels":["shift"]},
+      {"semantic_id":"sem.interaction.listen_only","coordinates":{"domain":"dialogue","speech_act":"boundary","interaction":"listen_only","epistemic":"none","affect":"neutral","reference":"current_turn"},"labels":["listen_only"]},
+      {"semantic_id":"sem.interaction.advice_permitted","coordinates":{"domain":"dialogue","speech_act":"request","interaction":"advice_permitted","epistemic":"none","affect":"neutral","reference":"current_turn"},"labels":["advice_request","advice_permitted"]},
+      {"semantic_id":"sem.discourse.acknowledge","coordinates":{"domain":"dialogue","speech_act":"acknowledge","interaction":"cooperative","epistemic":"affirmation","affect":"neutral","reference":"prior_turn"},"labels":["acknowledge"]},
+      {"semantic_id":"sem.affect.difficulty","coordinates":{"domain":"dialogue","speech_act":"share","interaction":"support_seek","epistemic":"self_report","affect":"difficulty","reference":"current_turn"},"labels":["difficulty","reports_difficulty"]},
+      {"semantic_id":"sem.reference.ambiguous","coordinates":{"domain":"dialogue","speech_act":"reference","interaction":"cooperative","epistemic":"uncertain","affect":"neutral","reference":"ambiguous"},"labels":["ambiguous_reference"]},
+      {"semantic_id":"sem.reference.explicit","coordinates":{"domain":"dialogue","speech_act":"reference","interaction":"cooperative","epistemic":"explicit","affect":"neutral","reference":"explicit"},"labels":["explicit_reference"]},
+      {"semantic_id":"sem.speech.question","coordinates":{"domain":"dialogue","speech_act":"question","interaction":"information_seek","epistemic":"unknown","affect":"neutral","reference":"current_turn"},"labels":["question_form"]},
+      {"semantic_id":"sem.policy.privacy","coordinates":{"domain":"policy","speech_act":"boundary","interaction":"protect","epistemic":"observed","affect":"neutral","reference":"current_turn"},"labels":["policy_privacy"]},
+      {"semantic_id":"sem.policy.safety","coordinates":{"domain":"policy","speech_act":"boundary","interaction":"protect","epistemic":"observed","affect":"urgent","reference":"current_turn"},"labels":["policy_safety"]},
+      {"semantic_id":"sem.policy.deletion","coordinates":{"domain":"policy","speech_act":"request","interaction":"deletion","epistemic":"observed","affect":"neutral","reference":"current_turn"},"labels":["policy_deletion"]},
+      {"semantic_id":"sem.output.contract","coordinates":{"domain":"output","speech_act":"request","interaction":"format","epistemic":"explicit","affect":"neutral","reference":"current_turn"},"labels":["output_contract"]},
+      {"semantic_id":"sem.uptake.correction","coordinates":{"domain":"dialogue","speech_act":"repair","interaction":"cooperative","epistemic":"revision","affect":"neutral","reference":"prior_turn"},"labels":["uptake_correction"]},
+      {"semantic_id":"sem.uptake.shift","coordinates":{"domain":"dialogue","speech_act":"shift","interaction":"cooperative","epistemic":"none","affect":"neutral","reference":"new_topic"},"labels":["uptake_shift"]},
+      {"semantic_id":"sem.uptake.return","coordinates":{"domain":"dialogue","speech_act":"return","interaction":"cooperative","epistemic":"none","affect":"neutral","reference":"prior_turn"},"labels":["uptake_return"]},
+      {"semantic_id":"sem.uptake.accept","coordinates":{"domain":"dialogue","speech_act":"acknowledge","interaction":"cooperative","epistemic":"affirmation","affect":"neutral","reference":"prior_turn"},"labels":["uptake_accept"]},
+      {"semantic_id":"sem.reference.repeat","coordinates":{"domain":"dialogue","speech_act":"reference","interaction":"cooperative","epistemic":"uncertain","affect":"neutral","reference":"ambiguous"},"labels":["reference_repeat"]}
+    ]
+  }
+}

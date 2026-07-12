@@ -1,0 +1,9 @@
+{
+  "model": "gemma4:e4b",
+  "profile": "strict-certainty-evidence-v1",
+  "case_count": 6,
+  "accepted_count": 4,
+  "semantic_reject_count": 2,
+  "rows_ref": "strict_rows.jsonl",
+  "claim": "live strict LCE gate only; not a general chat benchmark"
+}

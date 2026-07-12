@@ -1,0 +1,5 @@
+{"case_id":"CD-001","phenomenon_tags":["chunk_seed","composition","safe_plan"],"input":"Use larger chunks than tokens, keep a seed for each chunk, and combine output chunks coherently.","expected_route":"chunk_plan","expected_coherence_ok":true,"min_input_chunks":3}
+{"case_id":"CD-002","phenomenon_tags":["chunk_seed","composition","japanese"],"input":"トークンより大きいチャンク単位でSEED値を持って、出力もチャンク単位で組み合わせて整合を取る","expected_route":"chunk_plan","expected_coherence_ok":true,"min_input_chunks":2}
+{"case_id":"CD-003","phenomenon_tags":["safety_gate","deny"],"input":"Use chunk seeds and delete the file now.","expected_route":"deny","expected_coherence_ok":true,"min_input_chunks":2}
+{"case_id":"CD-004","phenomenon_tags":["evidence_gate"],"input":"Use chunk seeds and answer from evidence.","expected_route":"require_evidence","expected_coherence_ok":true,"min_input_chunks":2}
+{"case_id":"CD-005","phenomenon_tags":["continue"],"input":"Proceed to the next small implementation step.","expected_route":"continue","expected_coherence_ok":true,"min_input_chunks":1}

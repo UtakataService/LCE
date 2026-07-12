@@ -1,0 +1,9 @@
+{
+  "case_count": 40,
+  "route_accuracy": 1.0,
+  "required_property_accuracy": 0.3,
+  "planned_property_accuracy": 1.0,
+  "forbidden_property_accuracy": 1.0,
+  "case_accuracy": 0.3,
+  "claim": "daily_dialogue_safety_phase2_planned_vs_rendered_baseline"
+}

@@ -1,0 +1,7 @@
+{
+  "required": ["baseline_run_id", "baseline_id", "fixture_id", "candidate_id", "run_id", "lane_label", "result_ref", "failure_profile", "resource_snapshot_ref", "replay_manifest_ref", "adjudication_status", "block_condition_triggered"],
+  "properties": {
+    "baseline_id": {"enum": ["DATA-B0", "DATA-B1", "DATA-B2", "DATA-B3", "DATA-B6", "DATA-B8", "DATA-B9", "DATA-B10"]},
+    "lane_label": {"enum": ["WIN_CPU_FIRST", "WIN_GPU_ASSISTED", "PI_SUPERVISOR", "PI_LOCAL_PROBE", "CROSS_MACHINE"]}
+  }
+}

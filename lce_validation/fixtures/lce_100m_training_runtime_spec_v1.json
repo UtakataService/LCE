@@ -1,0 +1,11 @@
+{
+  "schema_version": "lce-training-runtime/v1",
+  "spec_id": "lce-100m-real-pilot",
+  "spec_version": "v1",
+  "require_cuda": true,
+  "corpus_path": "real-artifacts/corpus.normalized.jsonl",
+  "tokenizer_path": "real-artifacts/tokenizer.json",
+  "checkpoint_dir": "real-artifacts/checkpoints",
+  "target_snapshot_hash": "TARGET_SNAPSHOT_TO_BE_PINNED",
+  "corpus_snapshot_hash": "CORPUS_SNAPSHOT_TO_BE_PINNED"
+}

@@ -1,0 +1,20 @@
+{"id":"fkb-01-en","category":"01_math_quantities","input":"What is a percentage?","expected_fact_id":"fk-math-percentage","expected_language":"en"}
+{"id":"fkb-01-ja","category":"01_math_quantities","input":"確率とは何ですか？","expected_fact_id":"fk-math-probability","expected_language":"ja"}
+{"id":"fkb-02-en","category":"02_physics_earth","input":"What is gravity?","expected_fact_id":"fk-physics-gravity","expected_language":"en"}
+{"id":"fkb-02-ja","category":"02_physics_earth","input":"水の循環とは？","expected_fact_id":"fk-earth-water-cycle","expected_language":"ja"}
+{"id":"fkb-03-en","category":"03_chemistry_materials","input":"What is a molecule?","expected_fact_id":"fk-chemistry-molecule","expected_language":"en"}
+{"id":"fkb-03-ja","category":"03_chemistry_materials","input":"混合物とは何ですか？","expected_fact_id":"fk-chemistry-mixture","expected_language":"ja"}
+{"id":"fkb-04-en","category":"04_biology_health_literacy","input":"What is DNA?","expected_fact_id":"fk-biology-dna","expected_language":"en"}
+{"id":"fkb-04-ja","category":"04_biology_health_literacy","input":"生態系とは？","expected_fact_id":"fk-biology-ecosystem","expected_language":"ja"}
+{"id":"fkb-05-en","category":"05_geography_environment","input":"What is latitude?","expected_fact_id":"fk-geography-latitude","expected_language":"en"}
+{"id":"fkb-05-ja","category":"05_geography_environment","input":"生物多様性とは何ですか？","expected_fact_id":"fk-environment-biodiversity","expected_language":"ja"}
+{"id":"fkb-06-en","category":"06_history_civics","input":"What is a primary source?","expected_fact_id":"fk-history-primary-source","expected_language":"en"}
+{"id":"fkb-06-ja","category":"06_history_civics","input":"法の支配とは？","expected_fact_id":"fk-civics-rule-of-law","expected_language":"ja"}
+{"id":"fkb-07-en","category":"07_economics_finance_literacy","input":"What is opportunity cost?","expected_fact_id":"fk-economics-opportunity-cost","expected_language":"en"}
+{"id":"fkb-07-ja","category":"07_economics_finance_literacy","input":"金利とは何ですか？","expected_fact_id":"fk-finance-interest","expected_language":"ja"}
+{"id":"fkb-08-en","category":"08_computing_internet","input":"What is a database?","expected_fact_id":"fk-computing-database","expected_language":"en"}
+{"id":"fkb-08-ja","category":"08_computing_internet","input":"暗号化とは？","expected_fact_id":"fk-computing-encryption","expected_language":"ja"}
+{"id":"fkb-09-en","category":"09_language_writing_communication","input":"What is active listening?","expected_fact_id":"fk-communication-active-listening","expected_language":"en"}
+{"id":"fkb-09-ja","category":"09_language_writing_communication","input":"文脈とは何ですか？","expected_fact_id":"fk-language-context","expected_language":"ja"}
+{"id":"fkb-10-en","category":"10_planning_social_reasoning","input":"What is an assumption?","expected_fact_id":"fk-reasoning-assumption","expected_language":"en"}
+{"id":"fkb-10-ja","category":"10_planning_social_reasoning","input":"同意とは何ですか？","expected_fact_id":"fk-social-consent","expected_language":"ja"}

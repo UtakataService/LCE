@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "suite_count": 3,
+  "reports": {
+    "candidate_assurance": {
+      "case_count": 11,
+      "ok": true
+    },
+    "grading_assurance": {
+      "case_count": 7,
+      "ok": true
+    },
+    "acceptance_challenge": {
+      "case_count": 6,
+      "ok": true
+    }
+  },
+  "claim": "closed_fixture_assurance_contracts_only",
+  "not_claimed": [
+    "general_llm_quality",
+    "20b_equivalence",
+    "semantic_truth",
+    "production_safety",
+    "third_party_pack_trust"
+  ]
+}

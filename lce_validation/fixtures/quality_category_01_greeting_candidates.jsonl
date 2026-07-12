@@ -1,0 +1,4 @@
+{"candidate_id":"greet-01-001","surface":"お疲れさまです","act":"greeting","response":"お疲れさまです。今日はどんなことを進めましょうか。","decision":"PROMOTE","reason":"distinct_greeting_form_low_risk","category":"greeting_and_opening"}
+{"candidate_id":"greet-01-002","surface":"はじめまして、よろしくお願いします","act":"greeting","response":"はじめまして。こちらこそよろしくお願いします。まず、何から始めましょうか。","decision":"PROMOTE","reason":"distinct_opening_form_low_risk","category":"greeting_and_opening"}
+{"candidate_id":"greet-01-003","surface":"こんにちは","act":"greeting","response":"候補応答","decision":"QUARANTINE","reason":"active_pattern_collision","category":"greeting_and_opening"}
+{"candidate_id":"greet-01-004","surface":"久しぶり","act":"greeting","response":"久しぶりです。前回の続きですね。","decision":"QUARANTINE","reason":"assumes_prior_relationship","category":"greeting_and_opening"}

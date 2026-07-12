@@ -1,0 +1,35 @@
+# Python and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and runtime state
+.venv/
+venv/
+.env
+.env.*
+.lce_data/
+.lce-data/
+.lce_runs/
+.grenade/
+
+# Build and release artifacts
+build/
+dist/
+*.egg-info/
+
+# Editor and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Never commit local configuration, credentials, or generated private data
+config.local.*
+*.local.json
+*.secret.*
+gemma4-e4b-*.json

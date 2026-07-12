@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "run_id": "grading_assurance",
+  "case_count": 7,
+  "case_accuracy": 1.0,
+  "false_accept_count": 0,
+  "by_tag": {
+    "valid": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "independent": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "arithmetic": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "coverage": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "evidence": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "independence": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "calibration": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "disagreement": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    }
+  },
+  "claim": "closed_fixture_rubric_scoring_assurance_only",
+  "blocked_claims": [
+    "answer_quality",
+    "answer_correctness",
+    "grading_fairness",
+    "grader_competence",
+    "general_semantic_regrading"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "lce-pack/v1",
+  "pack_id": "org.lce.reference.language.listen",
+  "pack_version": "1.0.0",
+  "pack_type": "LanguagePack",
+  "engine_compatibility": "lce-core/v1",
+  "content_hash": "sha256:ee7a597801932628900e306e008690c7104a81687d7c3f034e23fd9635926835",
+  "capabilities": ["frame.listen_only"],
+  "payload": {
+    "rules": [
+      {
+        "legacy_rule_id": "legacy.frame.listen_only.v1",
+        "cue": "listen_only",
+        "patterns": ["just listen", "hear me out", "without advice", "聞いてほしい", "愚痴", "解決策はいらない"]
+      }
+    ]
+  }
+}

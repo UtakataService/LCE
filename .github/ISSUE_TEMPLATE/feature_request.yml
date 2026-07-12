@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a bounded capability, Pack, adapter, or evaluation improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and intended boundary
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Proposed evidence and evaluation
+      description: Describe fixtures, failure cases, provenance, and how overclaiming will be avoided.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Core, Pack, and security impact
+    validations:
+      required: true

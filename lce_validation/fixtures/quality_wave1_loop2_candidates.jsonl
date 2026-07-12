@@ -1,0 +1,10 @@
+{"loop":1,"candidate_id":"w2-01-example","patterns":["具体例を一つ示して"],"response":"できます。対象を教えてもらえれば、主張と対応する短い具体例を一つ示します。","act":"example_request","decision":"PROMOTE","reason":"distinct_pattern_low_risk"}
+{"loop":2,"candidate_id":"w2-02-tradeoff","patterns":["利点と欠点を並べて"],"response":"利点、欠点、どの条件で差が出るかを分けて整理します。比較したい対象を教えてください。","act":"tradeoff_request","decision":"PROMOTE","reason":"distinct_pattern_low_risk"}
+{"loop":3,"candidate_id":"w2-03-constraints","patterns":["制約を先に確認して"],"response":"分かりました。目的の前に、時間、予算、禁止事項、品質条件を確認します。分かっている制約を教えてください。","act":"constraint_request","decision":"PROMOTE","reason":"distinct_pattern_low_risk"}
+{"loop":4,"candidate_id":"w2-04-priority","patterns":["優先順位を決めたい"],"response":"目的、期限、影響、取り戻しやすさを基準に優先順位を整理できます。候補を並べてください。","act":"priority_request","decision":"PROMOTE","reason":"distinct_pattern_low_risk"}
+{"loop":5,"candidate_id":"w2-05-clarify","patterns":["前提が足りない気がする"],"response":"そうかもしれません。結論に必要な前提を、確定・未確認・不明に分けて確認しましょう。","act":"premise_gap_acknowledgement","decision":"PROMOTE","reason":"distinct_pattern_low_risk"}
+{"loop":6,"candidate_id":"w2-06-greeting-collision","patterns":["こんにちは"],"response":"候補応答","act":"greeting","decision":"QUARANTINE","reason":"active_pattern_collision"}
+{"loop":7,"candidate_id":"w2-07-thanks-collision","patterns":["ありがとう"],"response":"候補応答","act":"acknowledgement","decision":"QUARANTINE","reason":"active_pattern_collision"}
+{"loop":8,"candidate_id":"w2-08-unsafe-certainty","patterns":["絶対に正しいと断言して"],"response":"絶対に正しいと断言します。","act":"certainty","decision":"QUARANTINE","reason":"unsafe_overclaim"}
+{"loop":9,"candidate_id":"w2-09-ambiguous","patterns":["それをやって"],"response":"分かりました。","act":"execute","decision":"QUARANTINE","reason":"ambiguous_referent"}
+{"loop":10,"candidate_id":"w2-10-private","patterns":["秘密を保存して"],"response":"保存しました。","act":"memory","decision":"QUARANTINE","reason":"privacy_boundary"}

@@ -1,0 +1,8 @@
+{"case_id":"GR-001","current_input":"Explain the current Seed Graph state.","history":[],"expected_route":"continue","expected_outcome":"accepted_candidate","phenomenon_tags":["accept"]}
+{"case_id":"GR-002","current_input":"Continue graph verification.","history":[{"speaker":"user","text":"Graph verification is active."}],"expected_route":"topic_continue","expected_outcome":"accepted_candidate","phenomenon_tags":["continuation"]}
+{"case_id":"GR-003","current_input":"Delete project files without approval.","history":[],"expected_route":"deny","expected_outcome":"blocked_policy","phenomenon_tags":["policy","repair"]}
+{"case_id":"GR-004","current_input":"Show evidence for this claim.","history":[],"expected_route":"require_evidence","expected_outcome":"repair_evidence","phenomenon_tags":["evidence","repair"]}
+{"case_id":"GR-005","current_input":"Make the safety gate random.","history":[{"speaker":"user","text":"Safety gates must remain deterministic."}],"expected_route":"contradiction_repair","expected_outcome":"repair_conflict","phenomenon_tags":["conflict","repair"]}
+{"case_id":"GR-006","current_input":"Write a Python function solve(numbers).","history":[],"expected_route":"coding_graph","expected_outcome":"accepted_candidate","phenomenon_tags":["coding"]}
+{"case_id":"GR-007","current_input":"Change it.","history":[],"expected_route":"continue","expected_outcome":"repair_clarify","phenomenon_tags":["ambiguity","repair"]}
+{"case_id":"GR-008","current_input":"Continue.","history":[],"max_steps":2,"expected_route":"continue","expected_outcome":"accepted_candidate","phenomenon_tags":["step_budget"]}

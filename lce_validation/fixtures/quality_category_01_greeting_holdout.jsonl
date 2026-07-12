@@ -1,0 +1,2 @@
+{"case_id":"greet-holdout-01","input":"お疲れさまです。","expected_act":"greeting","expected_evidence_id":"ja-wave20-27-otsukare","phenomenon":"punctuation_normalization"}
+{"case_id":"greet-holdout-02","input":"はじめまして、よろしくお願いします。","expected_act":"greeting","expected_evidence_id":"ja-wave20-28-first-contact","phenomenon":"opening_with_punctuation"}

@@ -1,0 +1,6 @@
+{
+  "required": ["event_id", "run_id", "row_id", "candidate_id", "timestamp", "actor", "task_id", "event_type", "state_version", "artifact_hash_refs", "known_gaps", "redaction_state", "schema_version"],
+  "properties": {
+    "event_type": {"enum": ["input_received", "state_read", "state_write", "retrieval_query", "retrieval_result", "action_requested", "action_executed", "verifier_invoked", "verifier_result", "watchdog_incident", "resource_snapshot", "artifact_written", "replay_manifest_written", "redaction_recorded", "claim_audit"]}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "lce-training-corpus/v1",
+  "manifest_id": "lce-en-ja-pilot-corpus",
+  "manifest_version": "v1",
+  "sources": [
+    {"source_id": "en-open-pilot", "source_family": "en-open-pilot-family", "license": "declared-open-license", "consent_basis": "license-reviewed", "language": "en", "split": "train", "document_count": 8000, "raw_snapshot_hash": "sha256:en-raw", "normalized_snapshot_hash": "sha256:en-normalized", "dedup_policy_id": "minhash-v1", "pii_policy_id": "pii-filter-v1", "quality_policy_id": "quality-v1"},
+    {"source_id": "ja-open-pilot", "source_family": "ja-open-pilot-family", "license": "declared-open-license", "consent_basis": "license-reviewed", "language": "ja", "split": "train", "document_count": 2000, "raw_snapshot_hash": "sha256:ja-raw", "normalized_snapshot_hash": "sha256:ja-normalized", "dedup_policy_id": "minhash-v1", "pii_policy_id": "pii-filter-v1", "quality_policy_id": "quality-v1"},
+    {"source_id": "dialogue-blind", "source_family": "dialogue-blind-family", "license": "evaluation-consent", "consent_basis": "evaluator-reviewed", "language": "multilingual", "split": "interaction_blind", "document_count": 200, "raw_snapshot_hash": "sha256:blind-raw", "normalized_snapshot_hash": "sha256:blind-normalized", "dedup_policy_id": "exact-v1", "pii_policy_id": "pii-filter-v1", "quality_policy_id": "evaluation-v1"},
+    {"source_id": "release-sealed", "source_family": "release-sealed-family", "license": "evaluation-consent", "consent_basis": "release-evaluator-reviewed", "language": "multilingual", "split": "sealed", "document_count": 200, "raw_snapshot_hash": "sha256:sealed-raw", "normalized_snapshot_hash": "sha256:sealed-normalized", "dedup_policy_id": "exact-v1", "pii_policy_id": "pii-filter-v1", "quality_policy_id": "evaluation-v1"}
+  ],
+  "tokenizer": {"tokenizer_id": "lce-en-ja-pilot-bpe", "algorithm": "bpe", "vocabulary_size": 32000, "normalization_id": "unicode-nfkc-preserve-ja-v1", "byte_fallback": true, "training_snapshot_hash": "sha256:tokenizer-training-snapshot"}
+}

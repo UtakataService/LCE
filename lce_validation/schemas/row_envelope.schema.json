@@ -1,0 +1,7 @@
+{
+  "required": ["row_id", "row_type", "candidate_id", "claim_ids", "gate_ids", "artifact_refs", "status", "known_gaps", "red_line_status", "created_at"],
+  "properties": {
+    "row_type": {"enum": ["runtime_event", "verification_result", "fixture", "baseline_run", "resource_snapshot", "audit_issue", "claim_upgrade"]},
+    "red_line_status": {"enum": ["clean", "blocked", "violation", "needs_review"]}
+  }
+}

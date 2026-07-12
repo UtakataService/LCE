@@ -1,0 +1,7 @@
+{
+  "required": ["scan_row_id", "artifact_ref", "scan_scope", "prohibited_phrase", "matched_text_ref", "severity", "claim_type", "evidence_required", "result"],
+  "properties": {
+    "severity": {"enum": ["P0", "P1", "P2", "P3"]},
+    "result": {"enum": ["clean", "violation", "needs_review"]}
+  }
+}

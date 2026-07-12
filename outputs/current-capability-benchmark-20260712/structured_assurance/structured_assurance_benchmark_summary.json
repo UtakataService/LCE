@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "run_id": "structured_assurance",
+  "case_count": 8,
+  "case_accuracy": 1.0,
+  "rejection_recall": 1.0,
+  "acceptance_recall": 1.0,
+  "false_accept_count": 0,
+  "false_reject_count": 0,
+  "by_tag": {
+    "accepted": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "known": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "evidence_binding": {
+      "case_count": 5,
+      "case_ok": 5,
+      "accuracy": 1.0
+    },
+    "uncertain": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "intent_drift": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "required_term": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "forbidden_term": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "missing_required": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "unknown_ref": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "contradiction": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "unsupported": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    }
+  },
+  "claim": "closed_fixture_structured_assurance_only",
+  "blocked_claims": [
+    "general_intent_fidelity",
+    "natural_language_entailment",
+    "factual_truth",
+    "authorization_guarantee",
+    "model_quality_parity"
+  ]
+}

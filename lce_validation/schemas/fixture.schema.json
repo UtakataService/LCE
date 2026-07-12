@@ -1,0 +1,7 @@
+{
+  "required": ["fixture_id", "fixture_family", "candidate_ids", "phenomenon_tags", "input_payload_ref", "expected_behavior", "allowed_outcomes", "disallowed_outcomes", "gate_assertions", "baseline_expected_failure_profile", "provenance_ref", "license_ref", "contamination_ref", "label_refs", "replay_manifest_ref", "resource_snapshot_ref", "status"],
+  "properties": {
+    "fixture_family": {"enum": ["DATA-F-A", "DATA-F-B", "DATA-F-C", "DATA-F-D", "DATA-F-E", "DATA-F-F", "DATA-F-G"]},
+    "status": {"enum": ["contract_closed", "carried_forward_blocked", "provisional", "gateable", "blocked", "evidence_pending", "unsupported", "rework_required"]}
+  }
+}

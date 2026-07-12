@@ -1,0 +1,39 @@
+{
+  "profile_id": "gemma4-e4b-reference-v1",
+  "model_id": "gemma4:e4b",
+  "ollama_generate_endpoint": "http://127.0.0.1:11434/api/generate",
+  "timeout_seconds": 180,
+  "generation_options": {
+    "temperature": 0,
+    "seed": 7
+  },
+  "native_json_mode": true,
+  "contract": {
+    "contract_id": "gemma4-e4b-assured-summary-v1",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "summary": {"type": "string"},
+        "certainty": {"type": "string", "enum": ["known", "uncertain"]},
+        "evidence_refs": {"type": "array", "items": {"type": "string"}}
+      },
+      "required": ["summary", "certainty", "evidence_refs"],
+      "additionalProperties": false
+    },
+    "max_repairs": 0,
+    "allow_fenced_json": false
+  },
+  "assurance_policy": {
+    "policy_id": "gemma4-e4b-certainty-evidence-v1",
+    "certainty_path": "certainty",
+    "evidence_refs_path": "evidence_refs",
+    "required_evidence_claim_ids": ["evidence.budget.fixed"]
+  },
+  "evidence_claims": {
+    "evidence.budget.fixed": {
+      "claim_id": "evidence.budget.fixed",
+      "disposition": "supports"
+    }
+  },
+  "claim_boundary": "Reference integration only. The declared checks do not establish general chat quality, factuality, safety, or authorization."
+}

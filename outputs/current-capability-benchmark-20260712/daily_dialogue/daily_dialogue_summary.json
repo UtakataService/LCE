@@ -1,0 +1,10 @@
+{
+  "split": "development",
+  "case_count": 32,
+  "case_accuracy": 0.46875,
+  "response_rate": 1.0,
+  "non_clarify_rate": 0.65625,
+  "determinism_accuracy": 1.0,
+  "known_property_coverage": 8,
+  "claim": "daily_dialogue_phase1_baseline_only"
+}

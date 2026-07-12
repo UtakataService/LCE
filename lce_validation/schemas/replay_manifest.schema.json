@@ -1,0 +1,6 @@
+{
+  "required": ["replay_manifest_id", "run_id", "event_range", "event_hashes", "artifact_hash_refs", "state_versions", "resource_snapshot_refs", "watchdog_refs", "known_gaps", "redaction_records", "rebuild_command_ref", "replay_status"],
+  "properties": {
+    "replay_status": {"enum": ["manifest_present", "replayable", "gap_recorded", "quarantined", "rebuild_verified", "invalid"]}
+  }
+}

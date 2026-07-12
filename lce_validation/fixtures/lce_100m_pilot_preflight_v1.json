@@ -1,0 +1,14 @@
+{
+  "schema_version": "lce-pilot-preflight/v1",
+  "run_id": "pilot-100m-scratch-v1",
+  "parameter_count": 100000000,
+  "training_mode": "scratch",
+  "target_snapshot_hash": "TARGET_SNAPSHOT_FILLED_BY_TEST",
+  "corpus_snapshot_hash": "CORPUS_SNAPSHOT_FILLED_BY_TEST",
+  "declared_variant": "lm_only",
+  "selected_metric_ids": ["dialogue-continuity-v1", "en-ja-functional-parity-v1"],
+  "training_tokens": 10000000,
+  "max_sequence_length": 1024,
+  "checkpoint_policy": {"every_tokens": 1000000, "retain": 3},
+  "stop_conditions": ["loss_is_non_finite", "evaluation_regression_exceeds_threshold", "provenance_validation_failure"]
+}

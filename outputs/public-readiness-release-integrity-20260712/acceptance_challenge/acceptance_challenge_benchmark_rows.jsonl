@@ -1,0 +1,6 @@
+{"case_id": "ACH-001", "phenomenon_tags": ["clear"], "expected_decision": "CLEAR", "actual_decision": "CLEAR", "actual_reasons": [], "case_ok": true}
+{"case_id": "ACH-002", "phenomenon_tags": ["evidence_gap"], "expected_decision": "CHALLENGE", "actual_decision": "CHALLENGE", "actual_reasons": ["ACCEPTANCE_EVIDENCE_COUNT_BELOW_POLICY", "INDEPENDENT_REVIEWER_COUNT_BELOW_POLICY"], "case_ok": true}
+{"case_id": "ACH-003", "phenomenon_tags": ["boundary"], "expected_decision": "CHALLENGE", "actual_decision": "CHALLENGE", "actual_reasons": ["INDEPENDENT_REVIEWER_COUNT_BELOW_POLICY", "SCORE_NEAR_ACCEPTANCE_BOUNDARY"], "case_ok": true}
+{"case_id": "ACH-004", "phenomenon_tags": ["cross_check"], "expected_decision": "BLOCK", "actual_decision": "BLOCK", "actual_reasons": ["CROSS_CHECK_FAILED:regression", "INDEPENDENT_REVIEWER_COUNT_BELOW_POLICY"], "case_ok": true}
+{"case_id": "ACH-005", "phenomenon_tags": ["contradiction"], "expected_decision": "BLOCK", "actual_decision": "BLOCK", "actual_reasons": ["INDEPENDENT_REVIEWER_COUNT_BELOW_POLICY", "SIGNAL_BLOCK:contradiction:s"], "case_ok": true}
+{"case_id": "ACH-006", "phenomenon_tags": ["advisory"], "expected_decision": "CHALLENGE", "actual_decision": "CHALLENGE", "actual_reasons": ["INDEPENDENT_REVIEWER_COUNT_BELOW_POLICY", "SIGNAL_CHALLENGE:recent_regression:s"], "case_ok": true}

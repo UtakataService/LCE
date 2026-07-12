@@ -1,0 +1,8 @@
+{"case_id":"frame-repair-en","text":"Actually, I meant something else.","language":"en","expected_cues":["repair","shift"]}
+{"case_id":"frame-listen-ja","text":"今は愚痴を聞いてほしい。","language":"ja","expected_cues":["listen_only"]}
+{"case_id":"frame-advice-en","text":"What should I do? I need advice.","language":"en","expected_cues":["advice_request"]}
+{"case_id":"frame-shift-ja","text":"ところで、別の話がある。","language":"ja","expected_cues":["shift"]}
+{"case_id":"frame-return-en","text":"Let us return to the earlier topic.","language":"en","expected_cues":["return"]}
+{"case_id":"frame-reference-ja","text":"それは何という意味？","language":"ja","expected_cues":["ambiguous_reference","explicit_reference"]}
+{"case_id":"frame-close-en","text":"Bye, talk later.","language":"en","expected_cues":["close"]}
+{"case_id":"frame-difficulty-ja","text":"疲れていて困っている。","language":"ja","expected_cues":["reports_difficulty","difficulty"]}

@@ -1,0 +1,20 @@
+{"episode_id":"sdd-en-001","language":"en","split":"development","turns":[{"text":"hello"},{"text":"yeah"}],"expected_acts":["greeting","backchannel"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-002","language":"en","split":"development","turns":[{"text":"I am tired"},{"text":"yeah"}],"expected_acts":["share_difficulty","backchannel"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-003","language":"en","split":"development","turns":[{"text":"former option is tea"},{"text":"the former"}],"expected_acts":["reference_clarification","reference_resolution"],"expected_terminal":"OPEN","require_reference":true}
+{"episode_id":"sdd-en-004","language":"en","split":"development","turns":[{"text":"hello"},{"text":"by the way, something else"}],"expected_acts":["greeting","topic_shift"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-005","language":"en","split":"development","turns":[{"text":"hello"},{"text":"go back to the opening"}],"expected_acts":["greeting","topic_return"],"expected_terminal":"CLARIFICATION_PENDING"}
+{"episode_id":"sdd-en-006","language":"en","split":"development","turns":[{"text":"hello"},{"text":"actually, I meant tomorrow"}],"expected_acts":["greeting","self_correction"],"expected_terminal":"OPEN","require_correction":true}
+{"episode_id":"sdd-en-007","language":"en","split":"development","turns":[{"text":"What should I choose?"}],"expected_acts":["question"],"expected_terminal":"CLARIFICATION_PENDING"}
+{"episode_id":"sdd-en-008","language":"en","split":"development","turns":[{"text":"hello"},{"text":"bye"}],"expected_acts":["greeting","closing"],"expected_terminal":"CLOSED_NO_ACTION"}
+{"episode_id":"sdd-en-009","language":"en","split":"development","turns":[{"text":"I had a rough day"},{"text":"I do not want advice"}],"expected_acts":["share_difficulty","listen_only"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-010","language":"en","split":"development","turns":[{"text":"I finally finished"},{"text":"yes"}],"expected_acts":["share_positive_event","backchannel"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-011","language":"en","split":"development","turns":[{"text":"open to advice"}],"expected_acts":["consented_advice"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-012","language":"en","split":"development","turns":[{"text":"career decision"}],"expected_acts":["consent_check"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-en-013","language":"en","split":"development","turns":[{"text":"I am only venting. Please do not give advice yet."}],"expected_acts":["listen_only"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-ja-001","language":"ja","split":"development","turns":[{"text":"解決策はいらない"}],"expected_acts":["listen_only"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-ja-002","language":"ja","split":"development","turns":[{"text":"仕事を辞めるべき"}],"expected_acts":["consent_check"],"expected_terminal":"OPEN"}
+{"episode_id":"sdd-ja-003","language":"ja","split":"development","turns":[{"text":"今夜を乗り切れる気がしない"}],"expected_acts":["safety_support"],"expected_terminal":"FAILED_SAFE"}
+{"episode_id":"sdd-en-014","language":"en","split":"holdout","turns":[{"text":"actually, I meant next week"},{"text":"bye"}],"expected_acts":["self_correction","closing"],"expected_terminal":"CLOSED_NO_ACTION","require_correction":true}
+{"episode_id":"sdd-en-015","language":"en","split":"holdout","turns":[{"text":"the latter is coffee"},{"text":"latter"}],"expected_acts":["reference_clarification","reference_resolution"],"expected_terminal":"OPEN","require_reference":true}
+{"episode_id":"sdd-en-016","language":"en","split":"holdout","turns":[{"text":"I am tired"},{"text":"return to that"}],"expected_acts":["share_difficulty","topic_return"],"expected_terminal":"CLARIFICATION_PENDING"}
+{"episode_id":"sdd-ja-004","language":"ja","split":"holdout","turns":[{"text":"監視している証拠がある"}],"expected_acts":["grounded_support"],"expected_terminal":"BLOCKED"}

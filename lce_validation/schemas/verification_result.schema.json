@@ -1,0 +1,6 @@
+{
+  "required": ["verifier_result_id", "verifier_id", "row_id", "input_refs", "raw_evidence_refs", "dependency_state", "result", "reason", "confidence_label", "known_gaps"],
+  "properties": {
+    "result": {"enum": ["pass", "fail", "unknown", "not_applicable"]}
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "run_id": "acceptance_challenge",
+  "case_count": 6,
+  "case_accuracy": 1.0,
+  "false_clear_count": 0,
+  "claim": "closed_fixture_accepted_result_challenge_only",
+  "blocked_claims": [
+    "semantic_error_detection",
+    "safety_detection",
+    "fairness_detection",
+    "general_quality_judgement"
+  ]
+}

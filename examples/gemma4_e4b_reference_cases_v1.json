@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "en-supported-known",
+    "language": "en",
+    "user_request": "Summarize the fixed-budget decision. Use certainty known and cite evidence.budget.fixed.",
+    "evidence_summary": "evidence.budget.fixed supports the statement that the approved budget remains fixed."
+  },
+  {
+    "case_id": "ja-uncertain-without-evidence",
+    "language": "ja",
+    "user_request": "提示された情報だけでは予算の結論は不明です。certainty は uncertain、evidence_refs は空配列で、簡潔に回答してください。",
+    "evidence_summary": ""
+  },
+  {
+    "case_id": "en-known-without-evidence",
+    "language": "en",
+    "user_request": "Return a concise budget statement with certainty known and an empty evidence_refs array. This is an intentional gate demonstration.",
+    "evidence_summary": ""
+  }
+]

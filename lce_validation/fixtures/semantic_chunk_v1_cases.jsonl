@@ -1,0 +1,20 @@
+{"case_id":"SC-001","input":"Explain the current Seed Graph design.","expected_intent":"request_explanation","expected_predicate":"explain","phenomenon_tags":["intent","explanation"]}
+{"case_id":"SC-002","input":"Implement a semantic chunk parser.","expected_intent":"request_implementation","expected_predicate":"implement","phenomenon_tags":["intent","implementation"]}
+{"case_id":"SC-003","input":"Continue the previous design without changing the safety policy.","expected_intent":"continue_task","expected_predicate":"continue","expected_references":["previous_turn"],"constraint_contains":["without changing"],"phenomenon_tags":["continuation","reference","constraint"]}
+{"case_id":"SC-004","input":"Compare Seed Graph versus dense attention.","expected_intent":"request_comparison","expected_predicate":"compare","phenomenon_tags":["comparison"]}
+{"case_id":"SC-005","input":"Verify that every output has support.","expected_intent":"request_verification","expected_predicate":"verify","phenomenon_tags":["verification"]}
+{"case_id":"SC-006","input":"Update the dialogue layer but keep policy decisions deterministic.","expected_intent":"request_modification","expected_predicate":"modify","constraint_contains":["keep policy"],"phenomenon_tags":["modification","constraint"]}
+{"case_id":"SC-007","input":"Do not delete project files.","expected_intent":"state_information","expected_predicate":"delete","constraint_contains":["Do not delete"],"phenomenon_tags":["negation","policy"]}
+{"case_id":"SC-008","input":"The verifier must check evidence provenance.","expected_intent":"state_information","expected_predicate":"verify","constraint_contains":["must check"],"phenomenon_tags":["modality","constraint"]}
+{"case_id":"SC-009","input":"This should continue.","expected_intent":"continue_task","expected_predicate":"continue","expected_references":["deictic_this"],"phenomenon_tags":["deixis","continuation"]}
+{"case_id":"SC-010","input":"Change it.","expected_intent":"request_modification","expected_predicate":"modify","expected_references":["anaphoric_it"],"phenomenon_tags":["anaphora","ambiguity"]}
+{"case_id":"SC-011","input":"Continue.","expected_intent":"continue_task","expected_predicate":"continue","phenomenon_tags":["short_input"]}
+{"case_id":"SC-012","input":"What is semantic signature stability?","expected_intent":"request_explanation","expected_predicate":"explain","phenomenon_tags":["question"]}
+{"case_id":"SC-013","input":"Build a parser; verify its deterministic output.","chunk_index":0,"expected_intent":"request_implementation","expected_predicate":"implement","phenomenon_tags":["multi_chunk"]}
+{"case_id":"SC-014","input":"Build a parser; verify its deterministic output.","chunk_index":1,"expected_intent":"request_verification","expected_predicate":"verify","phenomenon_tags":["multi_chunk"]}
+{"case_id":"SC-015","input":"Never send external messages without approval.","expected_intent":"state_information","expected_predicate":"send","constraint_contains":["Never send"],"phenomenon_tags":["prohibition","external_action"]}
+{"case_id":"SC-016","input":"Refactor the graph and keep the existing node schema.","expected_intent":"request_modification","expected_predicate":"modify","constraint_contains":["keep the existing"],"phenomenon_tags":["refactor","constraint"]}
+{"case_id":"SC-017","input":"Describe how the policy gate works.","expected_intent":"request_explanation","expected_predicate":"explain","phenomenon_tags":["paraphrase"]}
+{"case_id":"SC-018","input":"Check the same approach.","expected_intent":"request_verification","expected_predicate":"verify","expected_references":["anaphoric_it"],"phenomenon_tags":["anaphora","verification"]}
+{"case_id":"SC-019","input":"Status ready.","expected_intent":"state_information","expected_predicate":"state","phenomenon_tags":["statement"]}
+{"case_id":"SC-020","input":"これをcontinueして","language_hint":"mixed","expected_intent":"continue_task","expected_predicate":"continue","phenomenon_tags":["japanese_eval","mixed_language"]}

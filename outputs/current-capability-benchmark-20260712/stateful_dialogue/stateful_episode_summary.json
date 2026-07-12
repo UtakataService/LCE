@@ -1,0 +1,9 @@
+{
+  "split": "development",
+  "case_count": 16,
+  "case_accuracy": 0.8125,
+  "determinism_accuracy": 1.0,
+  "english_case_count": 13,
+  "japanese_case_count": 3,
+  "claim": "bounded_stateful_episode_baseline_only"
+}

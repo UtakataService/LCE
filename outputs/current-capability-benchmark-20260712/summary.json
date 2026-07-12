@@ -1,0 +1,368 @@
+{
+  "daily_dialogue": {
+    "split": "development",
+    "case_count": 32,
+    "case_accuracy": 0.46875,
+    "response_rate": 1.0,
+    "non_clarify_rate": 0.65625,
+    "determinism_accuracy": 1.0,
+    "known_property_coverage": 8,
+    "claim": "daily_dialogue_phase1_baseline_only"
+  },
+  "daily_dialogue_safety": {
+    "case_count": 40,
+    "route_accuracy": 1.0,
+    "required_property_accuracy": 0.3,
+    "planned_property_accuracy": 1.0,
+    "forbidden_property_accuracy": 1.0,
+    "case_accuracy": 0.3,
+    "claim": "daily_dialogue_safety_phase2_planned_vs_rendered_baseline"
+  },
+  "stateful_dialogue": {
+    "split": "development",
+    "case_count": 16,
+    "case_accuracy": 0.8125,
+    "determinism_accuracy": 1.0,
+    "english_case_count": 13,
+    "japanese_case_count": 3,
+    "claim": "bounded_stateful_episode_baseline_only"
+  },
+  "natural_language": {
+    "ok": true,
+    "run_id": "natural_language",
+    "case_count": 12,
+    "case_accuracy": 1.0,
+    "route_accuracy": 1.0,
+    "outcome_accuracy": 1.0,
+    "fixture_match_accuracy": 1.0,
+    "by_tag": {
+      "english_paraphrase": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "service_port_lookup": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "english_overlap": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "missing_answer": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "english_claim_rejection": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "family_level_match": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "english_temporal": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "stale_evidence": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "english_pragmatic": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "ambiguous_reference": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "english_negation": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "contradiction": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "english_out_of_domain": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      }
+    },
+    "claim": "bounded_english_natural_language_benchmark_only",
+    "blocked_claims": [
+      "general_natural_language_understanding",
+      "japanese_language_handling",
+      "llm_quality_parity",
+      "transformer_replacement"
+    ]
+  },
+  "structured_assurance": {
+    "ok": true,
+    "run_id": "structured_assurance",
+    "case_count": 8,
+    "case_accuracy": 1.0,
+    "rejection_recall": 1.0,
+    "acceptance_recall": 1.0,
+    "false_accept_count": 0,
+    "false_reject_count": 0,
+    "by_tag": {
+      "accepted": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "known": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "evidence_binding": {
+        "case_count": 5,
+        "case_ok": 5,
+        "accuracy": 1.0
+      },
+      "uncertain": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "intent_drift": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "required_term": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "forbidden_term": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "missing_required": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "unknown_ref": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "contradiction": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "unsupported": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      }
+    },
+    "claim": "closed_fixture_structured_assurance_only",
+    "blocked_claims": [
+      "general_intent_fidelity",
+      "natural_language_entailment",
+      "factual_truth",
+      "authorization_guarantee",
+      "model_quality_parity"
+    ]
+  },
+  "candidate_assurance": {
+    "ok": true,
+    "run_id": "candidate_assurance",
+    "case_count": 11,
+    "case_accuracy": 1.0,
+    "hard_reject_recall": 1.0,
+    "hold_recall": 1.0,
+    "false_accept_count": 0,
+    "by_tag": {
+      "video": {
+        "case_count": 3,
+        "case_ok": 3,
+        "accuracy": 1.0
+      },
+      "object_presence": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "accept": {
+        "case_count": 4,
+        "case_ok": 4,
+        "accuracy": 1.0
+      },
+      "confidence": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "hold": {
+        "case_count": 4,
+        "case_ok": 4,
+        "accuracy": 1.0
+      },
+      "audio": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "speaker_phrase": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "evidence": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "rule_engine": {
+        "case_count": 3,
+        "case_ok": 3,
+        "accuracy": 1.0
+      },
+      "game": {
+        "case_count": 6,
+        "case_ok": 6,
+        "accuracy": 1.0
+      },
+      "hard_rule": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "reject": {
+        "case_count": 2,
+        "case_ok": 2,
+        "accuracy": 1.0
+      },
+      "advisory": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "warning": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "npc": {
+        "case_count": 3,
+        "case_ok": 3,
+        "accuracy": 1.0
+      },
+      "authorization": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "provenance": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      }
+    },
+    "claim": "closed_fixture_multimodal_candidate_assurance_only",
+    "blocked_claims": [
+      "object_recognition_accuracy",
+      "speaker_identity_accuracy",
+      "game_theory_quality",
+      "npc_behavior_quality",
+      "real_world_truth"
+    ]
+  },
+  "grading_assurance": {
+    "ok": true,
+    "run_id": "grading_assurance",
+    "case_count": 7,
+    "case_accuracy": 1.0,
+    "false_accept_count": 0,
+    "by_tag": {
+      "valid": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "independent": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "arithmetic": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "coverage": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "evidence": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "independence": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "calibration": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      },
+      "disagreement": {
+        "case_count": 1,
+        "case_ok": 1,
+        "accuracy": 1.0
+      }
+    },
+    "claim": "closed_fixture_rubric_scoring_assurance_only",
+    "blocked_claims": [
+      "answer_quality",
+      "answer_correctness",
+      "grading_fairness",
+      "grader_competence",
+      "general_semantic_regrading"
+    ]
+  },
+  "acceptance_challenge": {
+    "ok": true,
+    "run_id": "acceptance_challenge",
+    "case_count": 6,
+    "case_accuracy": 1.0,
+    "false_clear_count": 0,
+    "claim": "closed_fixture_accepted_result_challenge_only",
+    "blocked_claims": [
+      "semantic_error_detection",
+      "safety_detection",
+      "fairness_detection",
+      "general_quality_judgement"
+    ]
+  }
+}

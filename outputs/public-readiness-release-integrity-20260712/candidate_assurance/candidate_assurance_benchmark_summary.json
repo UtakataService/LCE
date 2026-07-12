@@ -1,0 +1,104 @@
+{
+  "ok": true,
+  "run_id": "candidate_assurance",
+  "case_count": 11,
+  "case_accuracy": 1.0,
+  "hard_reject_recall": 1.0,
+  "hold_recall": 1.0,
+  "false_accept_count": 0,
+  "by_tag": {
+    "video": {
+      "case_count": 3,
+      "case_ok": 3,
+      "accuracy": 1.0
+    },
+    "object_presence": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "accept": {
+      "case_count": 4,
+      "case_ok": 4,
+      "accuracy": 1.0
+    },
+    "confidence": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "hold": {
+      "case_count": 4,
+      "case_ok": 4,
+      "accuracy": 1.0
+    },
+    "audio": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "speaker_phrase": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "evidence": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "rule_engine": {
+      "case_count": 3,
+      "case_ok": 3,
+      "accuracy": 1.0
+    },
+    "game": {
+      "case_count": 6,
+      "case_ok": 6,
+      "accuracy": 1.0
+    },
+    "hard_rule": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "reject": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "advisory": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "warning": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "npc": {
+      "case_count": 3,
+      "case_ok": 3,
+      "accuracy": 1.0
+    },
+    "authorization": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "provenance": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    }
+  },
+  "claim": "closed_fixture_multimodal_candidate_assurance_only",
+  "blocked_claims": [
+    "object_recognition_accuracy",
+    "speaker_identity_accuracy",
+    "game_theory_quality",
+    "npc_behavior_quality",
+    "real_world_truth"
+  ]
+}

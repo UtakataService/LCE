@@ -1,0 +1,6 @@
+{
+  "required": ["artifact_ref", "artifact_path", "hash_algorithm", "hash_value", "byte_length", "created_by", "source_event_ids", "retention_class", "redaction_state"],
+  "properties": {
+    "hash_algorithm": {"enum": ["sha256"]}
+  }
+}

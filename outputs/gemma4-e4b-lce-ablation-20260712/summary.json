@@ -1,0 +1,10 @@
+{
+  "model": "gemma4:e4b",
+  "model_parameter_size": "8.0B per local Ollama metadata",
+  "case_count": 6,
+  "lm_only_structural_accept_count": 6,
+  "lce_accept_count": 5,
+  "lce_semantic_reject_count": 1,
+  "lce_repaired_count": 0,
+  "claim": "live structured-output ablation only; not a general chat or factuality benchmark"
+}

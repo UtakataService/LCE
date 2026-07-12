@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "run_id": "natural_language",
+  "case_count": 12,
+  "case_accuracy": 1.0,
+  "route_accuracy": 1.0,
+  "outcome_accuracy": 1.0,
+  "fixture_match_accuracy": 1.0,
+  "by_tag": {
+    "english_paraphrase": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "service_port_lookup": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "english_overlap": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "missing_answer": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "english_claim_rejection": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "unsupported_claim": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "family_level_match": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "english_temporal": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "stale_evidence": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "english_pragmatic": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "ambiguous_reference": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    },
+    "english_negation": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "contradiction": {
+      "case_count": 2,
+      "case_ok": 2,
+      "accuracy": 1.0
+    },
+    "english_out_of_domain": {
+      "case_count": 1,
+      "case_ok": 1,
+      "accuracy": 1.0
+    }
+  },
+  "claim": "bounded_english_natural_language_benchmark_only",
+  "blocked_claims": [
+    "general_natural_language_understanding",
+    "japanese_language_handling",
+    "llm_quality_parity",
+    "transformer_replacement"
+  ]
+}

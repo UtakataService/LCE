@@ -1,0 +1,11 @@
+{
+  "schema_version": "lce-post-training/v1",
+  "manifest_id": "lce-en-ja-post-training",
+  "manifest_version": "v1",
+  "stages": [
+    {"stage_id": "sft-en-ja-train", "stage": "sft", "split": "train", "source_family": "sft-en-ja", "license_manifest_hash": "sha256:sft-license", "consent_basis": "license-reviewed", "row_count": 1000, "content_snapshot_hash": "sha256:sft-content", "dedup_policy_id": "semantic-dedup-v1", "instruction_schema_hash": "sha256:instruction-schema", "response_schema_hash": "sha256:response-schema"},
+    {"stage_id": "pref-en-ja-train", "stage": "preference", "split": "train", "source_family": "pref-en-ja", "license_manifest_hash": "sha256:pref-license", "consent_basis": "rater-consent-reviewed", "row_count": 800, "content_snapshot_hash": "sha256:pref-content", "dedup_policy_id": "semantic-dedup-v1", "pair_schema_hash": "sha256:pair-schema", "rater_policy_id": "rater-policy-v1"},
+    {"stage_id": "safety-en-ja-train", "stage": "safety", "split": "train", "source_family": "safety-en-ja", "license_manifest_hash": "sha256:safety-license", "consent_basis": "policy-reviewed", "row_count": 500, "content_snapshot_hash": "sha256:safety-content", "dedup_policy_id": "semantic-dedup-v1", "policy_pack_hash": "sha256:policy-pack", "adjudication_policy_id": "safety-adjudication-v1"},
+    {"stage_id": "safety-sealed", "stage": "safety", "split": "sealed", "source_family": "safety-sealed", "license_manifest_hash": "sha256:sealed-license", "consent_basis": "release-evaluator-reviewed", "row_count": 100, "content_snapshot_hash": "sha256:sealed-content", "dedup_policy_id": "semantic-dedup-v1", "policy_pack_hash": "sha256:policy-pack", "adjudication_policy_id": "safety-adjudication-v1"}
+  ]
+}

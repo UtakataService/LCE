@@ -1,0 +1,6 @@
+{"case_id": "en-supported-known", "status": "ACCEPTED", "accepted": true, "violations": [], "repair_attempts": 0}
+{"case_id": "ja-uncertain-no-evidence", "status": "ACCEPTED", "accepted": true, "violations": [], "repair_attempts": 0}
+{"case_id": "en-known-without-evidence", "status": "SEMANTIC_REJECTED", "accepted": false, "violations": ["CERTAINTY_EVIDENCE_REQUIRED_CLAIM_MISSING"], "repair_attempts": 0}
+{"case_id": "ja-known-contradicted", "status": "SEMANTIC_REJECTED", "accepted": false, "violations": ["CERTAINTY_EVIDENCE_REF_UNKNOWN", "CERTAINTY_EVIDENCE_REQUIRED_CLAIM_MISSING"], "repair_attempts": 0}
+{"case_id": "en-injection-extra-key", "status": "ACCEPTED", "accepted": true, "violations": [], "repair_attempts": 0}
+{"case_id": "ja-uncertain-explicit", "status": "ACCEPTED", "accepted": true, "violations": [], "repair_attempts": 0}

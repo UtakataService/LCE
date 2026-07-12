@@ -1,0 +1,67 @@
+LCE PERSONAL AND ORGANIZATIONAL USE LICENSE, VERSION 1.0
+
+Copyright (c) 2026 LCE project maintainers
+
+1. Definitions
+
+"Software" means the LCE source code, documentation, fixtures, and examples
+distributed with this License.
+
+"Individual User" means a natural person acting solely in that person's own
+capacity and not on behalf of, at the direction of, or principally for the
+benefit of an Organization.
+
+"Organization" means any corporation, company, partnership, association,
+governmental body, educational institution, nonprofit, or other legal entity,
+and any person acting on behalf of one.
+
+2. Grant to Individual Users
+
+Subject to this License, each Individual User is granted a worldwide,
+royalty-free, non-exclusive, perpetual license to use, copy, modify, merge,
+publish, distribute, and create derivative works of the Software for any lawful
+purpose in that Individual User's own capacity.
+
+An Individual User may redistribute the Software or derivative works only when
+this License, the copyright notice, and all applicable notices are included.
+This grant does not authorize sublicensing the Software under different terms
+for use by an Organization.
+
+3. Organizational Use Requires Written Permission
+
+No permission is granted by this License for an Organization to use, copy,
+modify, distribute, host, deploy, provide as a service, or incorporate the
+Software into its products, services, research, internal systems, or operations.
+
+An Organization must obtain prior written permission from the copyright holder
+before any such use. Requests should be made through the repository's
+organization-use contact channel or issue tracker, with sufficient information
+about the proposed use.
+
+4. Conditions
+
+You must retain this License and all copyright notices in copies and substantial
+portions of the Software. You may not use the names, marks, or logos of the
+copyright holder to endorse or promote derivative works without separate written
+permission.
+
+5. No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. Termination
+
+The permissions granted by this License terminate automatically if you violate
+its terms. Sections 4 and 5 survive termination.
+
+7. Clarification
+
+This is a source-available license with different rights for Individual Users
+and Organizations. It is not an OSI-approved open-source license. This document
+is a project policy artifact and should receive jurisdiction-appropriate legal
+review before a broad public release.

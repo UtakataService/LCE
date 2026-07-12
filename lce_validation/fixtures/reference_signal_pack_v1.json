@@ -1,0 +1,22 @@
+{
+  "schema_version": "lce-pack/v1",
+  "pack_id": "org.lce.reference.signal.dialogue",
+  "pack_version": "1.0.0",
+  "pack_type": "LanguagePack",
+  "engine_compatibility": "lce-core/v1",
+  "content_hash": "sha256:8acc6a572f95a42684918124323032579a0477cdd58430e51a82ef88b9f3e377",
+  "capabilities": ["signal.policy.v1", "signal.uptake.v1", "signal.interpretation.v1"],
+  "payload": {
+    "rules": [
+      {"legacy_rule_id":"signal.policy.privacy.v1","cue":"policy_privacy","patterns":["password","api key","credit card","\u30d1\u30b9\u30ef\u30fc\u30c9","\u8a8d\u8a3c\u60c5\u5831"]},
+      {"legacy_rule_id":"signal.policy.safety.v1","cue":"policy_safety","patterns":["only real friend","only support","suicide","\u3042\u306a\u305f\u3057\u304b","\u541b\u3060\u3051\u306b\u76f8\u8ac7","\u81ea\u6bba"]},
+      {"legacy_rule_id":"signal.policy.deletion.v1","cue":"policy_deletion","patterns":["forget that","forget ","delete my","\u5fd8\u308c\u3066","\u524a\u9664\u3057\u3066"]},
+      {"legacy_rule_id":"signal.output.contract.v1","cue":"output_contract","patterns":["only json","return json","json\u3067","json\u3060\u3051"]},
+      {"legacy_rule_id":"signal.uptake.correction.v1","cue":"uptake_correction","patterns":["actually","not what i meant","\u8a02\u6b63","\u9055\u3046","\u305d\u3046\u3044\u3046\u610f\u5473\u3067\u306f\u306a\u3044"]},
+      {"legacy_rule_id":"signal.uptake.shift.v1","cue":"uptake_shift","patterns":["by the way","another topic","\u3068\u3053\u308d\u3067","\u5225\u306e\u8a71"]},
+      {"legacy_rule_id":"signal.uptake.return.v1","cue":"uptake_return","patterns":["back to","earlier plan","\u524d\u306e\u8a71","\u623b\u308b"]},
+      {"legacy_rule_id":"signal.uptake.accept.v1","cue":"uptake_accept","patterns":["yes","yeah","exactly","\u306f\u3044","\u305d\u3046"]},
+      {"legacy_rule_id":"signal.reference.repeat.v1","cue":"reference_repeat","patterns":["do that again","that again","repeat","\u305d\u308c\u3092\u307e\u305f","\u305d\u306e\u307e\u307e\u8868\u793a"]}
+    ]
+  }
+}

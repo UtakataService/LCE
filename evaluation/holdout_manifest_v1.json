@@ -1,0 +1,75 @@
+{
+  "schema_version": "lce-independent-holdout-manifest/v1",
+  "suite_id": "lce-v010-api-gate-holdout-a",
+  "public_payload": "metadata_only",
+  "case_text_visibility": "private_evaluator_held",
+  "expected_outcome_visibility": "private_evaluator_held",
+  "comparison_variants": [
+    "lce_only",
+    "lm_only",
+    "lm_with_lce"
+  ],
+  "tracks": [
+    {
+      "track_id": "structured_output",
+      "case_count": 60,
+      "phenomena": [
+        "valid_contract",
+        "malformed_structure",
+        "contract_mismatch",
+        "ambiguous_instruction",
+        "bilingual_contract"
+      ]
+    },
+    {
+      "track_id": "candidate_authorization",
+      "case_count": 40,
+      "phenomena": [
+        "supported_candidate",
+        "insufficient_evidence",
+        "authorization_boundary",
+        "provenance_mismatch",
+        "ambiguous_claim"
+      ]
+    },
+    {
+      "track_id": "acceptance_challenge",
+      "case_count": 25,
+      "phenomena": [
+        "justified_acceptance",
+        "unsupported_clear",
+        "challenge_required",
+        "evidence_gap",
+        "conflicting_signal"
+      ]
+    }
+  ],
+  "total_case_count": 125,
+  "metrics": [
+    "false_accept_count",
+    "false_hold_or_reject_count",
+    "contract_decision_match_rate",
+    "repair_return_rate",
+    "lce_gate_latency_ms_p50",
+    "lce_gate_latency_ms_p95"
+  ],
+  "release_targets": {
+    "critical_evidence_or_authorization_false_accept_count": 0,
+    "max_false_hold_or_reject_rate": 0.1,
+    "min_contract_decision_match_rate": 0.95,
+    "custody_audit_required": true
+  },
+  "custody": {
+    "corpus_location": "private_evaluator_held_repository",
+    "freeze_before_run": true,
+    "private_revision_and_archive_digest_recorded": true,
+    "public_case_material": "prohibited",
+    "implementation_author_access_before_run": "prohibited"
+  },
+  "publication": {
+    "publish_aggregate_metrics": true,
+    "publish_environment_fingerprint": true,
+    "publish_deidentified_failure_classes": true,
+    "publish_raw_cases_or_gold": false
+  }
+}

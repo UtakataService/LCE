@@ -1,0 +1,24 @@
+{
+  "schema_version": "lce-profile/v1",
+  "profile_id": "org.lce.reference.frame",
+  "profile_version": "1.0.0",
+  "engine_compatibility": "lce-core/v1",
+  "capabilities": ["frame.core.v1", "semantic.cube.dialogue.v1", "signal.policy.v1", "signal.uptake.v1", "signal.interpretation.v1"],
+  "pack_refs": [
+    {
+      "pack_id": "org.lce.reference.language.frame",
+      "pack_version": "1.0.0",
+      "content_hash": "sha256:1b5f26146ff4be57b057c556215172ce143c196395a85f907d9d8e1629ce927f"
+    },
+    {
+      "pack_id": "org.lce.reference.semantic.dialogue",
+      "pack_version": "1.0.0",
+      "content_hash": "sha256:87504dab1cac252ac7e46fe5d585adb1fa9057c927c4124c6204cf8fe84e70f8"
+    },
+    {
+      "pack_id": "org.lce.reference.signal.dialogue",
+      "pack_version": "1.0.0",
+      "content_hash": "sha256:8acc6a572f95a42684918124323032579a0477cdd58430e51a82ef88b9f3e377"
+    }
+  ]
+}
