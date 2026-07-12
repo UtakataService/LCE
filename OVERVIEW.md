@@ -45,8 +45,6 @@ model-owned; LCE does not duplicate a general content safety classifier.
 4. **Optional Ollama adapter**: model output remains a candidate until it
    clears the selected LCE contract.
 
-The detailed component inventory is in [CORE_COMPONENTS.md](CORE_COMPONENTS.md).
-
 ## Evidence and Non-Claims
 
 Current regression evidence is deliberately bounded. Fixed fixtures show that
@@ -72,4 +70,4 @@ natural conversation quality, or a parameter-equivalent uplift.
 The release candidate is **Experimental Open Core + Reference Pack + Reference
 Assurance Gateway**. Its current gates and outstanding blockers are maintained
 in [RELEASE_READINESS.md](RELEASE_READINESS.md). Historical design and research
-reports remain in `outputs/` and are indexed by [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md).
+reports remain in `outputs/` with their own bounded run dates.

@@ -92,6 +92,5 @@ Reference Assurance Gateway** です。公開可否は
 - [Open Core SDK](OPEN_CORE_SDK.md)
 - [評価方針](EVALUATION_POLICY.md)
 - [独立ホールドアウト評価計画](EVALUATION_HOLDOUT_PLAN.md)
-- [性能測定の範囲](PERFORMANCE.md)
 - [Pack信頼境界](PACK_TRUST.md)
 - [貢献方法](CONTRIBUTING.md) / [セキュリティ](SECURITY.md)

@@ -101,7 +101,5 @@ an OSI-approved open-source license. See [LICENSE](LICENSE),
 - [Evaluation policy](EVALUATION_POLICY.md)
 - [Independent holdout plan](EVALUATION_HOLDOUT_PLAN.md)
 - [Gemma 4 E4B reference integration](GEMMA4_E4B_REFERENCE.md)
-- [v0.1.0-alpha.1 release notes](RELEASE_NOTES_v0.1.0-alpha.1.md)
-- [Performance scope](PERFORMANCE.md)
 - [Pack trust boundary](PACK_TRUST.md)
 - [Contributing](CONTRIBUTING.md) and [security](SECURITY.md)

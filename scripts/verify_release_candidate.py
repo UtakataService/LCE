@@ -8,8 +8,6 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {
     "LICENSE",
-    "RELEASE_NOTES_v0.1.0-alpha.md",
-    "RELEASE_NOTES_v0.1.0-alpha.1.md",
     "PIP_INSTALL.md",
     "GEMMA4_E4B_REFERENCE.md",
     "EVALUATION_HOLDOUT_PLAN.md",
@@ -23,7 +21,7 @@ CONTACT = "https://utakataservice.com/contact/contact.php"
 
 def main() -> int:
     failures = [f"MISSING:{path}" for path in sorted(REQUIRED) if not (ROOT / path).is_file()]
-    for path in ("SUPPORT.md", "SECURITY.md", "ORGANIZATIONAL_USE.md", "RELEASE_NOTES_v0.1.0-alpha.md"):
+    for path in ("SUPPORT.md", "SECURITY.md", "ORGANIZATIONAL_USE.md"):
         if CONTACT not in (ROOT / path).read_text(encoding="utf-8"):
             failures.append(f"CONTACT_MISSING:{path}")
     if failures:

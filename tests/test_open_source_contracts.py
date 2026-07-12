@@ -11,7 +11,7 @@ def test_public_contract_documents_expose_experimental_and_license_boundaries():
         "CODE_OF_CONDUCT.md": "respectful",
         "SUPPORT.md": "does not provide production SLA",
         "LICENSE_POLICY.md": "Personal and Organizational Use",
-        "OPEN_SOURCE_ROADMAP_JA.md": "AB1",
+        "RELEASE_READINESS.md": "Experimental Open Core",
     }
     for filename, marker in required.items():
         assert marker.casefold() in (ROOT / filename).read_text(encoding="utf-8").casefold()

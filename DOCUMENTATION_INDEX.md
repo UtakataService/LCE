@@ -16,7 +16,6 @@
 | [QUICKSTART.md](QUICKSTART.md) | Reproduce the two dependency-free reference paths. |
 | [OPEN_CORE_SDK.md](OPEN_CORE_SDK.md) | Public SDK surface and its limits. |
 | [PIP_INSTALL.md](PIP_INSTALL.md) | GitHub and release-wheel installation with the installed commands. |
-| [REFERENCE_APP.md](REFERENCE_APP.md) | Reference Assurance Gateway behavior. |
 | [API.md](API.md) | Local HTTP Control API for model/program integration. |
 | [GEMMA4_E4B_REFERENCE.md](GEMMA4_E4B_REFERENCE.md) | Versioned local Ollama reference integration and its boundary. |
 | [PACK_TRUST.md](PACK_TRUST.md) | Present Pack trust boundary and third-party distribution blocker. |
@@ -27,9 +26,6 @@
 |---|---|
 | [EVALUATION_POLICY.md](EVALUATION_POLICY.md) | Fixture split, comparison, and publication rules. |
 | [EVALUATION_HOLDOUT_PLAN.md](EVALUATION_HOLDOUT_PLAN.md) | Metadata-only independent holdout contract, custody, and release targets. |
-| [PERFORMANCE.md](PERFORMANCE.md) | What the current performance lane measures. |
-| [CORE_COMPONENTS.md](CORE_COMPONENTS.md) | Component ownership and maturity. |
-| [outputs/gemma4-e4b-lce-ablation-20260712/REPORT_JA.md](outputs/gemma4-e4b-lce-ablation-20260712/REPORT_JA.md) | Live Gemma E4B structured-output integration result. |
 
 ## Community and Policy
 
@@ -38,10 +34,6 @@
 [LICENSE](LICENSE), [LICENSE_POLICY.md](LICENSE_POLICY.md), and
 [ORGANIZATIONAL_USE.md](ORGANIZATIONAL_USE.md) define the source-available
 Individual/Organization use boundary.
-
-[RELEASE_NOTES_v0.1.0-alpha.1.md](RELEASE_NOTES_v0.1.0-alpha.1.md) lists the
-current packaging follow-up and command surface; the original alpha release
-notes remain in `RELEASE_NOTES_v0.1.0-alpha.md`.
 
 ## Historical Reports
 
